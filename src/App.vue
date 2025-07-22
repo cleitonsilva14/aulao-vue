@@ -6,6 +6,7 @@ import ComDadosReativosPrimitivos from './components/ComDadosReativosPrimitivos.
 import ComDadosReativosPrimitivosNaoPrimitivos from './components/ComDadosReativosPrimitivosNaoPrimitivos.vue';
 import DataBinding from './components/DataBinding.vue';
 import ComProps from './components/ComProps.vue';
+import EscutaEvento from './components/EscutaEvento.vue';
 
 // comunicação PAI -> Filho (utilizando props)
 const borracha = "Borracha Azul"
@@ -16,7 +17,9 @@ const precoBorracha = 2.50
 <template>
   <header>Vue</header>
 
-  // comunicação PAI -> Filho (utilizando props)
+  <EscutaEvento/>
+
+   <!-- comunicação PAI -> Filho (utilizando props) -->
   <ComProps :item="borracha" :preco="precoBorracha"/>
   
   <ComProps item="Smartwatch" :preco="259.99"/>
