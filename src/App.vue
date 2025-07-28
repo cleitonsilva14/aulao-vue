@@ -10,15 +10,25 @@ import EscutaEvento from './components/EscutaEvento.vue';
 import PropriedadesComputadas from './components/PropriedadesComputadas.vue';
 import PropriedadesAssistidas from './components/PropriedadesAssistidas.vue';
 import RenderizacaoCondicional from './components/RenderizacaoCondicional.vue';
+import RenderizacaoListas from './components/RenderizacaoListas.vue';
 
 // comunicação PAI -> Filho (utilizando props)
 const borracha = "Borracha Azul"
 const precoBorracha = 2.50
+
+const birds = [
+  {nome: "Lilica", idade: 1},
+  {nome: "Pipoca", idade: 1},
+  {nome: "Faisca", idade: 1}
+]
+
 </script>
 
 <!-- HTML -->
 <template>
   <header>Vue</header>
+
+  <RenderizacaoListas nome="Maria" :passaros="birds"/>
 
   <RenderizacaoCondicional nome="Maria" :quantidade="0"/>
 
